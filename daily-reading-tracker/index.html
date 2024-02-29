@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Okuma Günlüğü</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="pageTitle">Okuma Günlüğü</h1>
+        <div id="bookInput">
+            <h2>Okumak İstediğiniz Kitap</h2>
+            <label for="bookName">Kitap Adı:</label>
+            <input type="text" id="bookName" name="bookName">
+            <label for="pageCount">Sayfa Sayısı:</label>
+            <input type="number" id="pageCount" name="pageCount" min="1">
+            <label for="daysLeft">Gün Sayısı:</label>
+            <input type="number" id="daysLeft" name="daysLeft" min="1">
+            <button id="bookInfoBtn">Devam</button>
+        </div>
+        <div id="readingLog" style="display:none;">
+            <h2 id="bookTitle">Okuma Günlüğü</h2>
+            <label for="currentPage">Bugün Okunan Sayfa Sayısı:</label>
+            <input type="number" id="currentPage" name="currentPage" min="0">
+            <button id="logBtn">Kaydet</button>
+            <div id="notes">
+                <h3>Notlar</h3>
+                <textarea id="noteInput"></textarea>
+                <button id="addNoteBtn">Not Ekle</button>
+                <ul id="noteList"></ul>
+            </div>
+            <div id="progress">
+                <h3>İlerleme Durumu</h3>
+                <p id="progressMessage">Bugün hiçbir şey okunmadı.</p>
+                <p id="remainingPages">Kalan Miktar: 0 sayfa</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
